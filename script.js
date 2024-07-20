@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             checkResult();
 
-            currentPlayer = currentPlayer === "X" ? "0" : "X"; 
+            currentPlayer = currentPlayer === "X" ? "O" : "X"; 
         });
     });
 
@@ -63,5 +63,15 @@ document.addEventListener("DOMContentLoaded", () => {
             isActive = false;
             return;
         } 
+    }
+
+    //to restart the game
+    function restartGame() {
+        gameBoard = ["", "", "", "", "", "", "", "", ""];//reseting the array
+        isActive = true;
+        currentPlayer = "X";
+
+        cells.forEach(cell => (cell.innerText = ""));//clearing the gameBoard UI
+        message.innerText = "";
     }
 })
