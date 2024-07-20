@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         [2, 5, 8], //third column
     ];
 
-    cells.forEach(cell => {
+    cells.forEach(cell => {//for each
         cell.addEventListener("click", () => {
             const index = cell.id;//get cell id
             
