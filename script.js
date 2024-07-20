@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if(gameWon) {//if game won is true
-            message.innerText = `Player $(currentPlayer)  Wins!`;
+            message.innerText = `Player ${currentPlayer}  Wins!`;
             isActive = false;
             return;
         }
