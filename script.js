@@ -37,4 +37,31 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     restartButton.addEventListener("click", restartGame);
+
+    //function to check result
+    function checkResult() {
+        let gameWon = false;
+
+        for(let i = 0; i < winConditions.length; i++) {
+            const [a, b, c] = winConditions[i]; //taking win conditions and storing
+
+            if(gameBoard[a] === gameBoard[b] === gameBoard[c]){
+                //win
+                gameWon = true;
+                break;
+            }
+        }
+
+        if(gameWon) {//if game won is true
+            message.innerText = `Player $(currentPlayer)  Wins!`;
+            isActive = false;
+            return;
+        }
+
+        if(!gameBoard.includes("")) {//if there is no empty strings left
+            message.innerText = "Game Draw!";
+            isActive = false;
+            return;
+        } 
+    }
 })
