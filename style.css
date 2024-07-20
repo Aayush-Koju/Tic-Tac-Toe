@@ -18,7 +18,7 @@ h1 {
 .game-board {
     display: grid;
     grid-template-columns: repeat(3, 100px);
-    gap: 5px;
+    gap: 10px;
     margin: 20px auto;
 }
 
@@ -42,4 +42,11 @@ button {
     font-size: 1.5em;
     border: none;
     background-color: cadetblue;
+}
+
+.watermark {
+    color: aquamarine;
+    font-size: 2rem;
+    /* margin-top: 400px;
+    margin-right: 900px; */
 }
