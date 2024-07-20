@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
         for(let i = 0; i < winConditions.length; i++) {
             const [a, b, c] = winConditions[i]; //taking win conditions and storing
 
-            if(gameBoard[a] === gameBoard[b] === gameBoard[c]){
+            if(gameBoard[a] && gameBoard[a] === gameBoard[b] && gameBoard[a] === gameBoard[c]){
                 //win
                 gameWon = true;
                 break;
