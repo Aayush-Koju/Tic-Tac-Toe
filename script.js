@@ -74,4 +74,4 @@ document.addEventListener("DOMContentLoaded", () => {
         cells.forEach(cell => (cell.innerText = ""));//clearing the gameBoard UI
         message.innerText = "";
     }
-})
+});
